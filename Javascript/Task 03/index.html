@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task03</title>
+</head>
+<body>
+    <h2>EMI CALCULATOR</h2>
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" placeholder="Enter Amount"><br>
+    <label for="Term">Term</label>
+    <input type="number" id="Term" placeholder="Enter Term"><br>
+    <label for="Rate">Interest Rate</label>
+    <input type="number" id="Rate" placeholder="Enter Interest Rate"><br>
+    <h1 id="result"></h1>
+    <button onclick="result()">Calculate EMI</button>
+    <script>
+        function result(amt,term,rate){
+         var amt=document.getElementById("amount").value
+         var term=document.getElementById("Term").value
+         var rate=document.getElementById("Rate").value
+         var monthlyrate=rate / 12 / 100 
+         var mr=Math.pow(1+monthlyrate,term)
+         var emi=(amt*monthlyrate*mr)/ (mr-1)
+         document.getElementById("result").innerHTML=emi.toFixed(2)
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM</title>
+</head>
+<style>
+    button{
+        color: olive;
+padding: 10px 20px;
+font-size: 15px;
+border-radius: 10px;
+background-color: white;
+border: 2px solid;
+margin-left: 150px;
+margin-top: 30px;
+    }
+    #everything{
+        margin-left: 580px;
+font-size: 25px;
+margin-top: 200px;
+color: olive;
+    }
+    #result{
+        margin-left: 140px;
+    }
+</style>
+<body>
+    <div id="everything">
+    <label>Enter first number</label>
+    <input type="text" id="input1"><br>
+    <label>Enter second number</label>
+    <input type="text" id="input2"><br>
+    <button onclick="result()">Sum</button>
+    <h1 id="result"></h1>
+    <script>
+        function result(val1,val2){
+            var val1=document.getElementById("input1").value;
+            var val2=document.getElementById("input2").value;
+            var sum=parseInt(val1)+parseInt(val2);
+            document.getElementById("result").innerHTML=sum;
+        }
+    </script>
+    </div>
+</body>
+</html>
